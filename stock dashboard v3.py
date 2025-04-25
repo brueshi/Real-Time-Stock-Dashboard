@@ -197,7 +197,7 @@ def process_stock_data(symbols, api_key, force_refresh=False):
 stock_data = process_stock_data(SYMBOLS, API_KEY)
 
 # Initialize the Dash app
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, suppress_callback_exceptions=True)
 app.title = "Stock Analysis Dashboard"
 
 # Define app layout
